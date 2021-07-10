@@ -37,7 +37,7 @@ Url found(from disk cache)::http://san.ri/tXGF9MI (the value is fetched as it wa
 
 docker build -t goenka811/neueda-app .
 
-9. Can run usign docker using:
+8. Can run using docker by:
 
 docker run -v ${PWD}/output:/tmp -p 8080:8080 goenka811/neueda-app
 
