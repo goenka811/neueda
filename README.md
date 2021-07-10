@@ -33,4 +33,12 @@ Url found(from disk cache)::http://san.ri/tXGF9MI (the value is fetched as it wa
 
 6. For any support queries the server logs can be checked which provide the computed URL's and also give persistent cache details (which can be stopped as its loaded just once on startup)
 
+7. Docker image was build (op the parent directory of target) using:
+
+docker build -t goenka811/neueda-app .
+
+8. Can run using docker by:
+
+docker run -v ${PWD}/output:/tmp -p 8080:8080 goenka811/neueda-app
+
 You can reach me on rishabhgoenka@gmail.com if any queries on the same..
