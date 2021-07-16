@@ -1,31 +1,3 @@
-provider "aws" {
-  region     = "eu-west-2"
-  access_key = "AKIAQHVYFRX6TSQ2LBN7"
-  secret_key = "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"
-}
-#resource "aws_instance" "myfirstserver" {
-#  ami           = "ami-089539692cca55c6c"
-#  instance_type = "t2.micro"
-  //vpc_security_group_ids = ["${aws_security_group.instance.id}"]
-  //tags = {Name = "main-example"}
-  //user_data = <<-EOF #!/bin/bash yum -y java-1.8.0-openjdk-devel yum -y install tomcat systemctl enable tomcat systemctl start tomcat echo "welcome to tomcat, hello world" //etc/systemd/system/{{to muser}}.service EOF
-  //tags = {
-    //Name = "HelloWorld"
-  //}
-#}
-#variable "subnet_prefix" {
-#  description = "cidr block for the subnet"
-
-#}
-
-
-#resource "aws_vpc" "prod-vpc" {
-#  cidr_block = "10.0.0.0/16"
-#  tags = {
-#    Name = "production"
-#  }
-#}
-
 resource "aws_subnet" "subnet-1" {
   vpc_id            = aws_vpc.prod-vpc.id
   cidr_block        = "10.0.1.0/24" 
@@ -195,10 +167,3 @@ resource "aws_subnet" "subnet-2" {
  output "server_id" {
    value = aws_instance.web-server-instance.id
  }
-
-
-# resource "<provider>_<resource_type>" "name" {
-#     config options.....
-#     key = "value"
-#     key2 = "another value"
-# }
